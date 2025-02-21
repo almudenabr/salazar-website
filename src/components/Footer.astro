@@ -1,0 +1,55 @@
+---
+import Logo from '../assets/logo_salazar.svg';
+
+---
+<footer class="footer">
+  <div class="wrapper">
+    <div class="footer-wrapper">
+      <div class="footer-logo">
+        <div class="logo">
+          <Logo height={32} width={130}/>
+        </div>
+        <h5>Managing and Monitoring Complex Infrastructure Has Never Been Easier</h5>
+      </div>
+      <div class="footer-policy">
+        <div>
+          <a href="/policy/">Privacy Policy</a>
+        </div>
+        <div> 
+          <a href="/cookie/">Cookie Policy</a>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <p>SORINT.lab @ 2025. All rights reserved.</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  
+</script>
+
+<style>
+  footer{
+    width:100%;
+    margin-top:80px;
+    background: linear-gradient(0deg, rgba(98,186,243,0.4) 0%, rgba(98,186,243,0) 90%);
+    box-shadow: inset 0 -18px 0px -10px rgb(var(--highlight));
+    padding-block: 40px;
+  }
+  .footer-wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-flow: row;
+  }
+  .footer-logo{
+    max-width:274px;
+  }
+  .footer-policy{
+    display: flex;
+    gap:40px
+  }
+  
+</style>

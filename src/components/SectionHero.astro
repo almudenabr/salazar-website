@@ -1,0 +1,53 @@
+---
+import Button from './Button.astro'
+---
+<div class="section-hero">
+  <div class="wrapper">
+    <div class="hero-content">
+      <h1>RPO Compliance & Governance Solution</h1>
+      <h3>Fulfill backup compliance requirements has never been easier</h3>
+      <p>Salazar is the all-in-one tool designed to streamline backup infrastructure management,<br>
+        ensuring visibility, security, and compliance on a single platform.</p>
+    </div>
+    <div class="hero-image-wrapper">
+      <div class="hero-image">
+        <img src="/images/img_Hero_MockScreens2x.png">  
+      </div> 
+      <div class="hero-scroll">
+        <Button title="⇣"/>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .section-hero{
+    height: 471px;
+    margin: auto;
+    display: flex;
+    flex-flow: column;
+    gap:40px;
+    padding-block: 40px;
+    text-align: center;
+  }
+  .hero-content{
+    display: flex;
+    flex-flow: column;
+    gap: 8px;
+  }
+  .hero-content, .hero-image-wrapper{
+    margin: auto;
+    margin-top: 20px;;
+    text-align: center;
+  }
+  .hero-image-wrapper{
+    width:100%;
+    height: 325px;
+  }
+  .hero-image{
+    padding-inline:12px;
+  }
+  .hero-scroll{
+    text-align: right;
+  }
+</style>

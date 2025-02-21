@@ -1,0 +1,29 @@
+---
+import Button from './Button.astro'
+import Logo from '../assets/logo_salazar.svg';
+---
+
+<header class="header">
+  <div class="wrapper">
+    <div class="header-top">
+      <div class="logo">
+        <Logo height={32} width={130}/>
+      </div>
+      <Button title="Book a demo" />
+    </div>
+  </div>
+</header>
+
+<style>
+  header {
+    width:100%;
+    padding-block:16px;
+    margin-bottom: 40px;
+  }
+  .header-top{
+    display: flex;
+    justify-content: space-between;
+  }
+
+
+</style>

@@ -1,0 +1,141 @@
+---
+import Button from './Button.astro'
+import Card from './Card.astro'
+
+const cardSolution =  [
+  {
+    cardId:'card-solution-1',
+    cardIcon:'pi-history',
+    cardHeader:'Modernize Backups',
+    cardDescription:'Reliable RPO (Recovery Point Objective) and RTO (Recovery Time Objective) for seamless data safety',
+    cardImageUrl:'/images/bgCard_Solutions_01-ModernBackups2x.png'
+  },
+  {
+    cardId:'card-solution-2',
+    cardIcon:'pi-eye',
+    cardHeader:'Optimized Resources',
+    cardDescription:'Full visibility into your IT landscape for efficient resource management',
+  },
+  {
+    cardId:'card-solution-3',
+    cardIcon:'pi-shield',
+    cardHeader:'Cybersecurity',
+    cardDescription:'Boost maturity and readiness against threats',
+    cardImageUrl:'/images/bgCard_Solutions_02-Cybersecurity2x.png'
+  },
+  {
+    cardId:'card-solution-4',
+    cardIcon:'pi-compass',
+    cardHeader:'Business Aligned IT',
+    cardDescription:'Prioritize IT services based on business impact and improve disaster recovery',
+  },
+  {
+    cardId:'card-solution-5',
+    cardIcon:'pi-users',
+    cardHeader:'Empowered Small Teams',
+    cardDescription:'Equip smaller teams with the tools they need to effortlessly manage and control every aspect of IT operations',
+    cardImageUrl:'/images/bgCard_Solutions_03-EmpoweredTeams2x.png'
+  },
+]
+---
+<div class="wrapper-section-solution">
+  <div class="wrapper">
+    <div class="section-solution-content">
+      <h4>THE SOLUTION</h4>
+      <h2>Salazar Your complete solution</h2>
+      <p>Salazar gather information from multiple suppliers in one place, making IT management easier than ever</p>
+    </div>
+    <div class="card-wrapper">
+      {cardSolution.map((cardItem)=>(
+        <Card 
+        isGradient
+        isIconed
+        nameIcon={cardItem.cardIcon} 
+        cardId={cardItem.cardId}
+        cardHeader={cardItem.cardHeader}
+        cardDescription={cardItem.cardDescription}
+        cardImage={cardItem.cardImageUrl}
+        />
+      ))}
+    </div>
+    <div class="section-solution-footer">
+  
+      <p>Ready to bring your IT under control?</p>
+      <div>
+        <Button title="Try Salazar today" />
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .wrapper-section-solution{
+    padding-block: 40px;
+  }
+  .wrapper-section-solution .section-solution-content{
+    display: flex;
+    flex-flow: column;
+    gap:16px;
+    padding-bottom: 40px;
+  }
+  h4{
+    color:rgb(var(--highlight))
+  }
+  .wrapper-section-solution .card-wrapper{
+    display: flex;
+    flex-flow: column;
+    gap: 24px;
+    height: max-content;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+  }
+
+  @media screen and (min-width:768px){ 
+    .wrapper-section-solution .card-wrapper {
+      flex-flow: row;
+      flex-wrap: wrap;
+    }
+  }
+  @media screen and (min-width:1440px){ 
+    .wrapper-section-solution .card-wrapper {
+      flex-wrap: nowrap;
+    }
+    .wrapper-section-solution .card-wrapper {
+      height: 416px;
+    }
+  }
+  .section-solution-footer{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+</style>
+
+<style is:global>
+ @media screen and (min-width:768px){ 
+   .wrapper-section-solution .card-wrapper .card{
+      flex-basis: calc(50% - 24px);
+    }
+    .wrapper-section-solution .card-wrapper .card:last-child{
+      flex-basis: 70%;
+      margin: auto;
+    }
+ }
+ @media screen and (min-width:1440px){ 
+    .wrapper-section-solution .card-wrapper .card{
+      flex-basis: calc(100% / 5) !important;
+    }
+    .wrapper-section-solution .card-wrapper .card:last-child{
+      margin: initial;
+    }
+    .wrapper-section-solution .card-wrapper .card:nth-child(odd){
+      height: 100%;
+    }
+    .wrapper-section-solution .card-wrapper .card:nth-child(even){
+      height: 85%;
+    }
+ }
+</style>

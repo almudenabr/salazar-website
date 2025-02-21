@@ -1,0 +1,102 @@
+---
+import Card from "./Card.astro"
+
+const cardSolution =  [
+  {
+    cardId:'card-feautures-1',
+    cardIcon:'pi-chart-line',
+    cardHeader:'Critical Services Management',
+    cardDescription:'Analyze, align, and optimize your critical services to enhance decision-making and resource allocation',
+  },
+  {
+    cardId:'card-feautures-2',
+    cardIcon:'pi-history',
+    cardHeader:'Backup Compliance',
+    cardDescription:'Configure domains, manage assets, and monitor real-time RPO and RTO compliance',
+  },
+  {
+    cardId:'card-feautures-3',
+    cardIcon:'pi-check-circle',
+    cardHeader:'Custom Reporting',
+    cardDescription:'Generate tailored reports for clear insights into backup compliance and performance',
+  },
+  {
+    cardId:'card-feautures-3',
+    cardIcon:'pi-wrench',
+    cardHeader:'Effortless Integration',
+    cardDescription:'Seamlessly connect with tools you already use, like Veritas or Cohesity-heavy backup compliance checks that take your focus away from core tasks',
+  },
+  {
+    cardId:'card-feautures-3',
+    cardIcon:'pi-sitemap',
+    cardHeader:'Centralized & Organized Infrastructure',
+    cardDescription:'Structure and manage your assets from domains to backups, all in one place',
+  },
+  {
+    cardId:'card-feautures-3',
+    cardIcon:'pi-users',
+    cardHeader:'Role-Based Access',
+    cardDescription:'Assign roles and permissions based on user responsibilities',
+  },
+]
+---
+<div class="wrapper-section-features">
+  <div class="wrapper">
+    <div class="section-features-content">
+      <h4>THE MAIN FEATURES</h4>
+      <h2>Salazar core features</h2>
+    </div>
+    <div class="card-wrapper">
+      {cardSolution.map((cardItem)=>(
+        <Card
+        isMulticolor
+        isIconed
+        nameIcon={cardItem.cardIcon}
+        cardId={cardItem.cardId}
+        cardHeader={cardItem.cardHeader}
+        cardDescription={cardItem.cardDescription}
+        />
+      ))}
+    </div>
+  </div>
+</div>
+
+<style>
+  .wrapper-section-features{
+    padding-block: 40px;
+  }
+  .section-features-content{
+    display: flex;
+    flex-flow: column;
+    gap: 8px;
+    padding-bottom:40px;
+  }
+  h4{
+    color: rgb(var(--highlight));
+  }
+  .wrapper-section-features .card-wrapper{
+    display: flex;    
+    gap:40px 24px;
+    flex-wrap: wrap;
+  }
+
+  .card{
+    min-height:200px;
+    min-width: 213px;
+    max-width: 410px;
+    width: 100%;
+    gap: 16px;
+  }
+</style>
+<style is:global>
+  @media screen and (min-width:768px){ 
+    .wrapper-section-features .card-wrapper .card{
+       flex-basis: calc(50% - 12px);
+     }
+  }
+  @media screen and (min-width:1440px){ 
+    .wrapper-section-features .card-wrapper .card{
+       flex-basis: calc(33% - 12px);
+     }
+  }
+ </style>

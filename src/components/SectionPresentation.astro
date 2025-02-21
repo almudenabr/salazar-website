@@ -1,0 +1,33 @@
+---
+import Button from './Button.astro'
+---
+<div class="wrapper-section-presentation">
+  <div class="wrapper">
+    <div class="section-presentation-content">
+      <h2>Salazar: Your All-in-One IT tool</h2>
+      <h3>Discover how Salazar can simplify your IT</h3>
+      <p>Salazar is your all-in-one tool for simplifying IT backup operations.<br>
+        With strategic insights and seamless infrastructure management, Salazar transforms your data into actionable intelligence <br>
+        that enhances backup compliance, boosts efficiency, and aligns IT with your business goals.</p>
+    </div>
+      <Button title="Book a demo" />
+  </div>
+</div>
+
+<style>
+  .wrapper-section-presentation{
+    margin: auto;
+    text-align:center;
+    padding-block: 40px;
+  }
+  .section-presentation-content{
+    display: flex;
+    flex-flow: column;
+    gap: 8px;
+    margin-bottom:14px;
+  }
+  h2{
+    color: rgb(var(--highlight))
+  }
+  
+</style>

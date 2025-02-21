@@ -1,0 +1,88 @@
+---
+import Button from './Button.astro'
+import Card from './Card.astro'
+
+const cardSolution =  [
+  {
+    cardId:'card-challenge-1',
+    cardIconAsNumber:'01',
+    cardHeader:'Limited \n\r Visibility',
+    cardDescription:'Struggling to get a complete view of your IT environment',
+  },
+  {
+    cardId:'card-challenge-2',
+    cardIconAsNumber:'02',
+    cardHeader:'Attack Impacts',
+    cardDescription:'Full visibility into your IT landscape for efficient resource management',
+  },
+  {
+    cardId:'card-challenge-3',
+    cardIconAsNumber:'03',
+    cardHeader:'Audit Requirements',
+    cardDescription:'Resource-heavy backup compliance checks that take your focus away from core tasks',
+  },
+]
+---
+<div class="wrapper-section-challenge">
+  <div class="wrapper">
+    <div class="section-challenge-content">
+      <h4>THE CHALLENGE</h4>
+      <h2>Overcoming the challenges of IT management</h2>
+      <p>Business continuity depends on resilience, and protecting data is now more critical than ever.<br>
+        Without an integrated approach, you're likely facing:</p>
+    </div>
+    <div class="card-wrapper">
+        {cardSolution.map((cardItem)=>(
+          <Card 
+          isBorder
+          isNumbered 
+          iconAsNumber={cardItem.cardIconAsNumber}
+          cardId={cardItem.cardId}
+          cardHeader={cardItem.cardHeader}
+          cardDescription={cardItem.cardDescription}
+          />
+        ))}
+  
+    </div>
+    <div class="section-challenge-footer">
+      <p>Don’t let these challenges slow you down</p>
+      <div>
+        <Button title="Learn more about Salazar ↓" />
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .wrapper-section-challenge{
+    padding-block: 40px;
+  }
+  .section-challenge-content{
+    display: flex;
+    flex-flow: column;
+    gap:12px;
+    margin-bottom: 24px;
+  }
+  h4{
+    color: rgb(var(--highlight));
+  }
+  .wrapper-section-challenge .card-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    gap:24px;
+    margin-bottom: 40px;
+  }
+  @media screen and (min-width:768px){
+    .wrapper-section-challenge .card-wrapper{
+      flex-wrap: nowrap;
+    }
+  }
+
+  .section-challenge-footer{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    gap: 12px;
+  }
+</style>
