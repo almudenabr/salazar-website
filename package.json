@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "astro": "^5.2.5",
+    "astro-i18next": "^1.0.0-beta.21",
     "ci": "^2.3.0",
     "primeicons": "^7.0.0"
   }
