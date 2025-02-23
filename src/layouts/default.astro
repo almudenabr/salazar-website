@@ -1,9 +1,11 @@
 ---
 import 'primeicons/primeicons.css'
+import { t, setDefaultNamespace } from "i18next";
+import { HeadHrefLangs } from "astro-i18next/components";
 
 ---
 <!doctype html>
-<html lang="en">
+<html lang=lang={i18next.language}>
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
@@ -18,13 +20,14 @@ import 'primeicons/primeicons.css'
 		</script>
 	<!-- End Google Tag Manager -->
 	<script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="dfbdf771-91b3-4189-86dd-62e42a2f9adc" data-blockingmode="auto" type="text/javascript"></script>
-		<title>Salazar</title>
+		<title>{t('salazar.title')}</title>
 	</head>
 	<body>
 		<!-- Google Tag Manager (noscript) -->
 		<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M599KRXF" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 		<!-- End Google Tag Manager (noscript) -->
-    <slot />
+    <HeadHrefLangs />
+		<slot />
 	</body>
 </html>
 

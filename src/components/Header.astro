@@ -1,6 +1,7 @@
 ---
 import Button from './Button.astro'
 import Logo from '../assets/logo_salazar.svg';
+import { t } from 'i18next'
 ---
 
 <header class="header">
@@ -9,7 +10,7 @@ import Logo from '../assets/logo_salazar.svg';
       <div class="logo">
         <Logo height={32} width={130}/>
       </div>
-      <Button title="Book a demo" />
+      <Button title={t('home:button.demo')} />
     </div>
   </div>
 </header>

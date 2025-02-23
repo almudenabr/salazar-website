@@ -1,16 +1,15 @@
 ---
 import Button from './Button.astro'
+import { t } from 'i18next'
 ---
 <div class="wrapper-section-presentation">
   <div class="wrapper">
     <div class="section-presentation-content">
-      <h2>Salazar: Your All-in-One IT tool</h2>
-      <h3>Discover how Salazar can simplify your IT</h3>
-      <p>Salazar is your all-in-one tool for simplifying IT backup operations.<br>
-        With strategic insights and seamless infrastructure management, Salazar transforms your data into actionable intelligence <br>
-        that enhances backup compliance, boosts efficiency, and aligns IT with your business goals.</p>
+      <h2>{t('section.presentation.header')}</h2>
+      <h3>{t('section.presentation.subheader')}</h3>
+      <p>{t('section.presentation.paragraph')}</p>
     </div>
-      <Button title="Book a demo" />
+      <Button title={t('button.demo')} />
   </div>
 </div>
 

@@ -1,0 +1,109 @@
+{
+  "salazar":{
+    "title":"Salazar"
+  },
+  "button":{
+    "demo":"Book a demo",
+    "more": "Learn more about Salazar",
+    "try": "Try Salazar today"
+  },
+  "section":{
+    "hero":{
+      "header":"RPO Compliance & Governance Solution",
+      "subheader":"Fulfill backup compliance requirements has never been easier",
+      "paragraph":"Salazar is the all-in-one tool designed to streamline backup infrastructure management, \n ensuring visibility, security, and compliance on a single platform."
+    },
+    "presentation":{
+      "header":"Salazar: Your All-in-One IT tool",
+      "subheader":"Discover how Salazar can simplify your IT",
+      "paragraph":"Salazar is your all-in-one tool for simplifying IT backup operations. With strategic insights and seamless infrastructure management, Salazar transforms your data into actionable intelligence that enhances backup compliance, boosts efficiency, and aligns IT with your business goals."
+    },
+    "challenge":{
+      "header":"Overcoming the challenges of IT management",
+      "subheader":"The challenge",
+      "paragraph":"Business continuity depends on resilience, and protecting data is now more critical than ever. Without an integrated approach, you're likely facing:",
+      "paragraph-2":"Don’t let these challenges slow you down",
+      "card":{
+        "card-1":{
+          "header": "Limited Visibility",
+          "subheader":"01",
+          "paragraph": "Struggling to get a complete view of your IT environment"
+        },
+        "card-2":{
+          "header": "Attack Impacts",
+          "subheader":"02",
+          "paragraph": "Unable to guide security activities. Can’t carry out demo attacks scenarios and cannot fully determined attack impacts"
+        },
+        "card-3":{
+          "header": "Audit Requirements",
+          "subheader":"03",
+          "paragraph": "Resource-heavy backup compliance checks that take your focus away from core tasks"
+        }
+      }
+    },
+    "solution":{
+      "subheader":"The solution",
+      "header":"<1>Salazar</1> Your complete solution",
+      "paragraph":"Salazar gather information from multiple suppliers in one place, making IT management easier than ever",
+      "paragraph-2":"Ready to bring your IT under control?",
+      "card":{
+        "card-1":{
+            "header": "Modernized Backups",
+            "paragraph": "Reliable RPO (Recovery Point Objective) and RTO (Recovery Time Objective) for seamless data safety"
+          },
+        "card-2":{
+            "header": "Optimized Resources",
+            "paragraph": "Unable to guide security activities. Can’t carry out demo attacks scenarios and cannot fully determined attack impacts"
+          },
+        "card-3":{
+            "header": "Cybersecurity",
+            "paragraph": "Boost maturity and readiness against threats"
+          },
+        "card-4":{
+            "header": "Business Aligned IT ",
+            "paragraph": "Prioritize IT services based on business impact and improve disaster recovery"
+          },
+        "card-5":{
+            "header": "Empowered Small Teams",
+            "paragraph": "Equip smaller teams with the tools they need to effortlessly manage and control every aspect of IT operations"
+          }
+      }
+    },
+    "features":{
+      "header":"the main features",
+      "subheader":"Salazar core features",
+      "card":{
+        "card-1":{
+            "header": "Critical Services Management",
+            "paragraph": "Analyze, align, and optimize your critical services to enhance decision-making and resource allocation"
+          },
+        "card-2":{
+            "header": "Modernized Backups",
+            "paragraph": "Configure domains, manage assets, and monitor real-time RPO and RTO compliance"
+          },
+        "card-3":{
+            "header": "Backup Compliance",
+            "paragraph": "Generate tailored reports for clear insights into backup compliance and performance"
+          },
+        "card-4":{
+            "header": "Custom Reporting",
+            "paragraph": "Seamlessly connect with tools you already use, like Veritas or Cohesity"
+          },
+        "card-5":{
+            "header": "Centralized & Organized Infrastructure",
+            "paragraph": "Structure and manage your assets from domains to backups, all in one place"
+          },
+        "card-6":{
+            "header": "Role-Based Access",
+            "paragraph": "Assign roles and permissions based on user responsibilities"
+          }
+      }
+    },
+    "form":{
+      "header":"Ready to transform your IT management?",
+      "subheader":"Book a Demo Today",
+      "paragraph":"Discover how Salazar can enhance security, optimize operations and simplify backup compliance. Request a demo to see Salazar in action and experience the difference it can make for your organization."
+    }
+  },
+  "footer":{}
+}

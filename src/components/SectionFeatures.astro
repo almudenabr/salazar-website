@@ -1,60 +1,61 @@
 ---
 import Card from "./Card.astro"
+import { t } from 'i18next'
 
-const cardSolution =  [
+const cardFeatures =  [
   {
     cardId:'card-feautures-1',
     cardIcon:'pi-chart-line',
-    cardHeader:'Critical Services Management',
-    cardDescription:'Analyze, align, and optimize your critical services to enhance decision-making and resource allocation',
+    cardHeader:'section.features.card.card-1.header',
+    cardDescription:'section.features.card.card-1.paragraph',
   },
   {
     cardId:'card-feautures-2',
     cardIcon:'pi-history',
-    cardHeader:'Backup Compliance',
-    cardDescription:'Configure domains, manage assets, and monitor real-time RPO and RTO compliance',
+    cardHeader:'section.features.card.card-2.header',
+    cardDescription:'section.features.card.card-2.paragraph',
   },
   {
     cardId:'card-feautures-3',
     cardIcon:'pi-check-circle',
-    cardHeader:'Custom Reporting',
-    cardDescription:'Generate tailored reports for clear insights into backup compliance and performance',
+    cardHeader:'section.features.card.card-3.header',
+    cardDescription:'section.features.card.card-3.paragraph',
   },
   {
     cardId:'card-feautures-3',
     cardIcon:'pi-wrench',
-    cardHeader:'Effortless Integration',
-    cardDescription:'Seamlessly connect with tools you already use, like Veritas or Cohesity-heavy backup compliance checks that take your focus away from core tasks',
+    cardHeader:'section.features.card.card-4.header',
+    cardDescription:'section.features.card.card-4.paragraph',
   },
   {
     cardId:'card-feautures-3',
     cardIcon:'pi-sitemap',
-    cardHeader:'Centralized & Organized Infrastructure',
-    cardDescription:'Structure and manage your assets from domains to backups, all in one place',
+    cardHeader:'section.features.card.card-5.header',
+    cardDescription:'section.features.card.card-5.paragraph',
   },
   {
     cardId:'card-feautures-3',
     cardIcon:'pi-users',
-    cardHeader:'Role-Based Access',
-    cardDescription:'Assign roles and permissions based on user responsibilities',
+    cardHeader:'section.features.card.card-6.header',
+    cardDescription:'section.features.card.card-6.paragraph',
   },
 ]
 ---
 <div class="wrapper-section-features">
   <div class="wrapper">
     <div class="section-features-content">
-      <h4>THE MAIN FEATURES</h4>
-      <h2>Salazar core features</h2>
+      <h4>{t('section.features.header')}</h4>
+      <h2>{t('section.features.subheader')}</h2>
     </div>
     <div class="card-wrapper">
-      {cardSolution.map((cardItem)=>(
+      {cardFeatures.map((cardItem)=>(
         <Card
         isMulticolor
         isIconed
         nameIcon={cardItem.cardIcon}
         cardId={cardItem.cardId}
-        cardHeader={cardItem.cardHeader}
-        cardDescription={cardItem.cardDescription}
+        cardHeader={t(cardItem.cardHeader)}
+        cardDescription={t(cardItem.cardDescription)}
         />
       ))}
     </div>
@@ -73,6 +74,7 @@ const cardSolution =  [
   }
   h4{
     color: rgb(var(--highlight));
+    text-transform: uppercase;
   }
   .wrapper-section-features .card-wrapper{
     display: flex;    

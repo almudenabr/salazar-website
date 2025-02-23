@@ -1,39 +1,41 @@
 ---
+import { Trans } from 'astro-i18next/components'
 import Button from './Button.astro'
 import Card from './Card.astro'
+import {t} from "i18next"
 
 const cardSolution =  [
   {
     cardId:'card-solution-1',
     cardIcon:'pi-history',
-    cardHeader:'Modernize Backups',
-    cardDescription:'Reliable RPO (Recovery Point Objective) and RTO (Recovery Time Objective) for seamless data safety',
+    cardHeader:'section.solution.card.card-1.header',
+    cardDescription:'section.solution.card.card-1.paragraph',
     cardImageUrl:'/images/bgCard_Solutions_01-ModernBackups2x.png'
   },
   {
     cardId:'card-solution-2',
     cardIcon:'pi-eye',
-    cardHeader:'Optimized Resources',
-    cardDescription:'Full visibility into your IT landscape for efficient resource management',
+    cardHeader:'section.solution.card.card-2.header',
+    cardDescription:'section.solution.card.card-2.paragraph'
   },
   {
     cardId:'card-solution-3',
     cardIcon:'pi-shield',
-    cardHeader:'Cybersecurity',
-    cardDescription:'Boost maturity and readiness against threats',
+    cardHeader:'section.solution.card.card-3.header',
+    cardDescription:'section.solution.card.card-3.paragraph',
     cardImageUrl:'/images/bgCard_Solutions_02-Cybersecurity2x.png'
   },
   {
     cardId:'card-solution-4',
     cardIcon:'pi-compass',
-    cardHeader:'Business Aligned IT',
-    cardDescription:'Prioritize IT services based on business impact and improve disaster recovery',
+    cardHeader:'section.solution.card.card-4.header',
+    cardDescription:'section.solution.card.card-4.paragraph'
   },
   {
     cardId:'card-solution-5',
     cardIcon:'pi-users',
-    cardHeader:'Empowered Small Teams',
-    cardDescription:'Equip smaller teams with the tools they need to effortlessly manage and control every aspect of IT operations',
+    cardHeader:'section.solution.card.card-5.header',
+    cardDescription:'section.solution.card.card-5.paragraph',
     cardImageUrl:'/images/bgCard_Solutions_03-EmpoweredTeams2x.png'
   },
 ]
@@ -41,9 +43,13 @@ const cardSolution =  [
 <div class="wrapper-section-solution">
   <div class="wrapper">
     <div class="section-solution-content">
-      <h4>THE SOLUTION</h4>
-      <h2>Salazar Your complete solution</h2>
-      <p>Salazar gather information from multiple suppliers in one place, making IT management easier than ever</p>
+      <h4>{t('section.solution.subheader')}</h4>
+      <h2>
+        <Trans i18nKey="section.solution.header">
+          <span></span><span></span>
+        </Trans>
+      </h2>
+      <p>{t('section.solution.paragraph')}</p>
     </div>
     <div class="card-wrapper">
       {cardSolution.map((cardItem)=>(
@@ -52,17 +58,17 @@ const cardSolution =  [
         isIconed
         nameIcon={cardItem.cardIcon} 
         cardId={cardItem.cardId}
-        cardHeader={cardItem.cardHeader}
-        cardDescription={cardItem.cardDescription}
+        cardHeader={t(cardItem.cardHeader)}
+        cardDescription={t(cardItem.cardDescription)}
         cardImage={cardItem.cardImageUrl}
         />
       ))}
     </div>
     <div class="section-solution-footer">
   
-      <p>Ready to bring your IT under control?</p>
+      <p>{t('section.solution.paragraph-2')}</p>
       <div>
-        <Button title="Try Salazar today" />
+        <Button title={t('button.try')} />
       </div>
     </div>
   </div>
@@ -79,7 +85,11 @@ const cardSolution =  [
     padding-bottom: 40px;
   }
   h4{
-    color:rgb(var(--highlight))
+    color:rgb(var(--highlight));
+    text-transform: uppercase;
+  }
+  h2>span{
+    color: rgb(var(--highlight));
   }
   .wrapper-section-solution .card-wrapper{
     display: flex;

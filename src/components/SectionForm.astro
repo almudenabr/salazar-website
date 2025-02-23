@@ -1,13 +1,13 @@
 ---
-import Button from './Button.astro'
+import {t} from 'i18next'
 ---
 
 <div class="wrapper-section-form">
   <div class="wrapper">
     <div class="section-form-content">
-      <h2>Ready to transform your IT management?</h2>
-      <h3>Book a Demo Today</h3>
-      <p>Discover how Salazar can enhance security, optimize operations and simplify backup compliance. Request a demo to see Salazar in action and experience the difference it can make for your organization.</p>
+      <h2>{t('section.form.subheader')}</h2>
+      <h3>{t('section.form.header')}</h3>
+      <p>{t('section.form.paragraph')}</p>
     </div>
     <div class="hubspot-form">
       <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/embed/v2.js"></script>

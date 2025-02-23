@@ -1,53 +1,54 @@
 ---
 import Button from './Button.astro'
 import Card from './Card.astro'
+import { t } from 'i18next'
 
-const cardSolution =  [
+
+const cardChallenge =  [
   {
     cardId:'card-challenge-1',
-    cardIconAsNumber:'01',
-    cardHeader:'Limited \n\r Visibility',
-    cardDescription:'Struggling to get a complete view of your IT environment',
+    cardIconAsNumber:'section.challenge.card.card-1.subheader',
+    cardHeader:'section.challenge.card.card-1.header',
+    cardDescription:'section.challenge.card.card-1.paragraph',
   },
   {
     cardId:'card-challenge-2',
-    cardIconAsNumber:'02',
-    cardHeader:'Attack Impacts',
-    cardDescription:'Full visibility into your IT landscape for efficient resource management',
+    cardIconAsNumber:'section.challenge.card.card-2.subheader',
+    cardHeader:'section.challenge.card.card-2.header',
+    cardDescription:'section.challenge.card.card-2.paragraph'
   },
   {
     cardId:'card-challenge-3',
-    cardIconAsNumber:'03',
-    cardHeader:'Audit Requirements',
-    cardDescription:'Resource-heavy backup compliance checks that take your focus away from core tasks',
+    cardIconAsNumber:'section.challenge.card.card-3.subheader',
+    cardHeader:'section.challenge.card.card-3.header',
+    cardDescription:'section.challenge.card.card-3.paragraph'
   },
 ]
 ---
 <div class="wrapper-section-challenge">
   <div class="wrapper">
     <div class="section-challenge-content">
-      <h4>THE CHALLENGE</h4>
-      <h2>Overcoming the challenges of IT management</h2>
-      <p>Business continuity depends on resilience, and protecting data is now more critical than ever.<br>
-        Without an integrated approach, you're likely facing:</p>
+      <h4>{t('section.challenge.subheader')}</h4>
+      <h2>{t('section.challenge.header')}</h2>
+      <p>{t('section.challenge.paragraph')}</p>
     </div>
     <div class="card-wrapper">
-        {cardSolution.map((cardItem)=>(
+        {cardChallenge.map((cardItem)=>(
           <Card 
           isBorder
           isNumbered 
-          iconAsNumber={cardItem.cardIconAsNumber}
+          iconAsNumber={t(cardItem.cardIconAsNumber)}
           cardId={cardItem.cardId}
-          cardHeader={cardItem.cardHeader}
-          cardDescription={cardItem.cardDescription}
+          cardHeader={t(cardItem.cardHeader)}
+          cardDescription={t(cardItem.cardDescription)}
           />
         ))}
   
     </div>
     <div class="section-challenge-footer">
-      <p>Don’t let these challenges slow you down</p>
+      <p>{t('section.challenge.paragraph-2')}</p>
       <div>
-        <Button title="Learn more about Salazar ↓" />
+        <Button title={t('button.more')} />
       </div>
     </div>
   </div>
@@ -65,6 +66,7 @@ const cardSolution =  [
   }
   h4{
     color: rgb(var(--highlight));
+    text-transform: uppercase;
   }
   .wrapper-section-challenge .card-wrapper{
     display: flex;
