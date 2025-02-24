@@ -1,6 +1,6 @@
 ---
 import 'primeicons/primeicons.css'
-import { t, setDefaultNamespace } from "i18next";
+import { t } from "i18next";
 import { HeadHrefLangs } from "astro-i18next/components";
 
 ---
@@ -12,20 +12,20 @@ import { HeadHrefLangs } from "astro-i18next/components";
 		<link rel="icon" type="image/svg+xml" href="/favicon.ico" />
 		<meta name="generator" content={Astro.generator} />
 		<!-- Google Tag Manager -->
-		<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+		<script>
+		(
+			function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 			new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 			j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 			'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-			})(window,document,'script','dataLayer','GTM-M599KRXF');
+			}
+		)(window,document,'script','dataLayer','GTM-ND7HKQ76');
 		</script>
-	<!-- End Google Tag Manager -->
-	<script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="dfbdf771-91b3-4189-86dd-62e42a2f9adc" data-blockingmode="auto" type="text/javascript"></script>
+		<!-- End Google Tag Manager -->
+		<script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="14aa0834-c3f3-4bc0-98bf-3895513d9ee6" data-blockingmode="auto" type="text/javascript"></script>
 		<title>{t('salazar.title')}</title>
 	</head>
 	<body>
-		<!-- Google Tag Manager (noscript) -->
-		<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M599KRXF" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-		<!-- End Google Tag Manager (noscript) -->
     <HeadHrefLangs />
 		<slot />
 	</body>
