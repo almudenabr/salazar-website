@@ -1,5 +1,6 @@
 ---
 import Logo from '../assets/logo_salazar.svg';
+import { t } from 'i18next'
 
 ---
 <footer class="footer">
@@ -9,18 +10,21 @@ import Logo from '../assets/logo_salazar.svg';
         <div class="logo">
           <Logo height={32} width={130}/>
         </div>
-        <h5>Managing and Monitoring Complex Infrastructure Has Never Been Easier</h5>
+        <h5>{t('footer.payoff')}</h5>
       </div>
       <div class="footer-policy">
         <div>
-          <a class="link" href="/policy/">Privacy Policy</a>
+          <a class="link" href="/policy/">{t('footer.privacy')}</a>
         </div>
         <div> 
-          <a class="link" href="/cookie/">Cookie Policy</a>
+          <a class="link" href="/cookie/">{t('footer.cookie')}</a>
         </div>
       </div>
       <div class="footer-copyright">
-        <p><a class="link" href="https://www.sorint.com" target="_blank">SORINT.lab @ 2025</a> All rights reserved.</p>
+        <p>
+          <a class="link" href="https://www.sorint.com" target="_blank">{t('footer.site')}</a>
+          <span>{t('footer.disclaimer')}</span>
+        </p>
       </div>
     </div>
   </div>
@@ -40,16 +44,62 @@ import Logo from '../assets/logo_salazar.svg';
   }
   .footer-wrapper{
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-flow: row;
+    flex-flow: column;
+    flex-wrap: wrap;
+    gap:40px
   }
   .footer-logo{
     max-width:274px;
   }
   .footer-policy{
     display: flex;
+    flex-flow: column;
+    gap:20px
+  }
+
+  @media screen and (min-width: 768px){
+    .footer-wrapper{
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
     gap:40px
+  }
+  .footer-logo{
+    width: 100%;
+  }
+    .footer-policy{
+    display: flex;
+    flex-flow: row;
+    gap:20px
+  }
+  .footer-copyright{
+    width: 100%;
+    justify-items: center;
+  }
+    
+  }
+  @media screen and (min-width: 1440px){
+    .footer-wrapper{
+      justify-content: space-between;
+      align-items: center;
+      flex-flow: row;
+    }
+    .footer-logo{
+      width: 33%;
+    }
+    .footer-policy{
+    display: flex;
+    flex-flow: row;
+    gap:20px
+  }
+    .footer-copyright{
+      width: fit-content;
+    justify-items: initial;
+  }
+    
+    
   }
   .link{
     text-decoration: underline;

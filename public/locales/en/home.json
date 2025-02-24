@@ -105,5 +105,11 @@
       "paragraph":"Discover how Salazar can enhance security, optimize operations and simplify backup compliance. Request a demo to see Salazar in action and experience the difference it can make for your organization."
     }
   },
-  "footer":{}
+  "footer":{
+    "payoff": "RPO compliance & governance solution",
+    "cookie":"Cookie Policy",
+    "privacy":"Privacy Policy",
+    "site":"SORINT.lab @ 2025",
+    "disclaimer": "All rights reserved."
+  }
 }
