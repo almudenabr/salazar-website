@@ -1,30 +1,13 @@
 ---
-const {cardId, isMulticolor, isIconed, isBorder, isGradient, nameIcon, isNumbered,iconAsNumber, cardDescription, cardHeader, cardImage} = Astro.props
+const {class:className, cardId, cardDescription, cardHeader, ...rest} = Astro.props
 ---
-<div class:list={[
-  'card', 
-  { 
-    'has-border':isBorder, 
-    'has-gradient': isGradient,
-    'has-multicolor': isMulticolor  
-  } 
-  ]} 
-  id={cardId}
-  >
-  { isGradient && 
-    <div class="card-background-image" >
-      <img src={cardImage} />
-    </div>
-  }
-  {
-    isIconed && 
-    <div class="card-icon" >
-      <i class={`pi ${nameIcon}`}></i>
-    </div>
-  }
-    {isNumbered && <div class="card-title-number">{iconAsNumber}</div>}
+<div class={className}{...rest} id={cardId} class:list={['card']}>
+  <slot name="card-background-image" />
+  <slot name="card-icon"></slot>
+  <slot name="card-number"></slot>
+    
   <div class="card-content">
-    <div class:list={['card-header',{'split-header':isNumbered}]}>
+    <div class:list={['card-header']}>
       {cardHeader}
     </div>
     <div class="card-description">
@@ -51,62 +34,18 @@ const {cardId, isMulticolor, isIconed, isBorder, isGradient, nameIcon, isNumbere
     flex-flow: column;
     gap: 14px;
   }
-  .card-icon{
-    font-size: 36px;
-    color: rgb(var(--highlight));
-  }
-  .card-title-number{
-    font-size: 24px;
-    line-height: 26.4px;
-    font-weight: 700;
-    color:white
-  }
   .card-header{
     font-size: 24px;
     line-height: 31.25px;
     font-weight:700
   }
-  .card-header.split-header{
-    width: min-content;
-    word-wrap: break-word;
+  .card-header{
+    white-space: initial;
+  } 
+  @media screen and (min-width:768px) {
+    .card-header{
+    white-space: pre-line;
+  } 
   }
   
-  .has-border{
-    border:2px solid rgb(var(--highlight))
-  }
-  .has-gradient{
-    background-color:rgb(23,23,23,1) ;  
-    background: linear-gradient(
-      150deg, 
-      rgb(70 157 215) 7%, 
-      rgb(48 97 128) 15%, 
-      rgba(23, 23, 23, 1) 100%
-    );
-    
-  }
-  .card-background-image{
-    position: absolute;
-    top:0;
-    left:0;
-    width: 100%;
-    height: 100%;
-    border-radius: inherit;
-  }
-  .card-background-image>img{
-    width: 100%;
-  }
-  .card.has-multicolor:nth-child(odd){
-    background-color: #33617e;
-  }
-  .card.has-multicolor:nth-child(even){
-    background-color: #234357;
-  }
-  .card.has-multicolor:hover{
-    background-color: rgb(var(--highlight));
-    transition: all 0.3s ease-out;
-  }
-  .card.has-multicolor:hover,
-  .card.has-multicolor:hover .card-icon{
-    color: #234357;
-  }
 </style>

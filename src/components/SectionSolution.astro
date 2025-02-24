@@ -53,15 +53,19 @@ const cardSolution =  [
     </div>
     <div class="card-wrapper">
       {cardSolution.map((cardItem)=>(
-        <Card 
-        isGradient
-        isIconed
-        nameIcon={cardItem.cardIcon} 
+        <Card
+        class="card has-gradient"
         cardId={cardItem.cardId}
         cardHeader={t(cardItem.cardHeader)}
         cardDescription={t(cardItem.cardDescription)}
-        cardImage={cardItem.cardImageUrl}
-        />
+        >
+          <div slot="card-background-image" class="card-background-image" >
+            <img src={cardItem.cardImageUrl} />
+          </div>
+          <div slot="card-icon" class="card-icon" >
+            <i class={`pi ${cardItem.cardIcon}`}></i>
+          </div>
+        </Card>
       ))}
     </div>
     <div class="section-solution-footer">
@@ -91,6 +95,7 @@ const cardSolution =  [
   h2>span{
     color: rgb(var(--highlight));
   }
+  /* CARD */
   .wrapper-section-solution .card-wrapper{
     display: flex;
     flex-flow: column;
@@ -106,6 +111,13 @@ const cardSolution =  [
       flex-flow: row;
       flex-wrap: wrap;
     }
+    .wrapper-section-solution .card-wrapper .card{
+      flex-basis: calc(50% - 24px);
+    }
+    .wrapper-section-solution .card-wrapper .card:last-child{
+      flex-basis: 70%;
+      margin: auto;
+    }
   }
   @media screen and (min-width:1440px){ 
     .wrapper-section-solution .card-wrapper {
@@ -114,27 +126,7 @@ const cardSolution =  [
     .wrapper-section-solution .card-wrapper {
       height: 416px;
     }
-  }
-  .section-solution-footer{
-    display: flex;
-    flex-flow: column;
-    align-items: center;
-    gap: 12px;
-  }
 
-</style>
-
-<style is:global>
- @media screen and (min-width:768px){ 
-   .wrapper-section-solution .card-wrapper .card{
-      flex-basis: calc(50% - 24px);
-    }
-    .wrapper-section-solution .card-wrapper .card:last-child{
-      flex-basis: 70%;
-      margin: auto;
-    }
- }
- @media screen and (min-width:1440px){ 
     .wrapper-section-solution .card-wrapper .card{
       flex-basis: calc(100% / 5) !important;
     }
@@ -147,5 +139,37 @@ const cardSolution =  [
     .wrapper-section-solution .card-wrapper .card:nth-child(even){
       height: 85%;
     }
- }
+  }
+
+  .has-gradient{
+    background-color:rgb(23,23,23,1) ;  
+    background: linear-gradient(
+      150deg, 
+      rgb(70 157 215) 7%, 
+      rgb(48 97 128) 15%, 
+      rgba(23, 23, 23, 1) 100%
+    );
+  }
+  .card-icon{
+    font-size: 36px;
+    color: rgb(var(--highlight));
+  }
+  .card-background-image{
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+  }
+  .card-background-image>img{
+    width: 100%;
+  }
+  .section-solution-footer{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    gap: 12px;
+  }
+
 </style>

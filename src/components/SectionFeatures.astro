@@ -50,13 +50,15 @@ const cardFeatures =  [
     <div class="card-wrapper">
       {cardFeatures.map((cardItem)=>(
         <Card
-        isMulticolor
-        isIconed
-        nameIcon={cardItem.cardIcon}
+        class="card has-multicolor"
         cardId={cardItem.cardId}
         cardHeader={t(cardItem.cardHeader)}
         cardDescription={t(cardItem.cardDescription)}
-        />
+        >
+          <div slot="card-icon" class="card-icon" >
+            <i class={`pi ${cardItem.cardIcon}`}></i>
+          </div>
+        </Card>
       ))}
     </div>
   </div>
@@ -85,20 +87,39 @@ const cardFeatures =  [
   .card{
     min-height:200px;
     min-width: 213px;
-    max-width: 410px;
     width: 100%;
     gap: 16px;
   }
-</style>
-<style is:global>
+  .card-icon{
+    font-size: 36px;
+    color: rgb(var(--highlight));
+  }
+  .card.has-multicolor:nth-child(odd){
+    background-color: #33617e;
+  }
+  .card.has-multicolor:nth-child(even){
+    background-color: #234357;
+  }
+  .card.has-multicolor:hover{
+    background-color: rgb(var(--highlight));
+    transition: all 0.3s ease-out;
+  }
+  .card.has-multicolor:hover,
+  .card.has-multicolor:hover .card-icon{
+    color: #234357;
+  }
+
   @media screen and (min-width:768px){ 
     .wrapper-section-features .card-wrapper .card{
+      min-width: calc(50% - 12px);
        flex-basis: calc(50% - 12px);
      }
   }
   @media screen and (min-width:1440px){ 
     .wrapper-section-features .card-wrapper .card{
+      min-width: initial;
        flex-basis: calc(33% - 12px);
      }
   }
- </style>
+</style>
+

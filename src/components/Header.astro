@@ -10,7 +10,7 @@ import { t } from 'i18next'
       <div class="logo">
         <Logo height={32} width={130}/>
       </div>
-      <Button title={t('home:button.demo')} id="button-header-book-demo" />
+      <slot name="button"/>
     </div>
   </div>
 </header>

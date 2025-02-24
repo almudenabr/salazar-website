@@ -25,17 +25,17 @@
       "paragraph-2":"Don’t let these challenges slow you down",
       "card":{
         "card-1":{
-          "header": "Limited Visibility",
+          "header": "Limited \nVisibility",
           "subheader":"01",
           "paragraph": "Struggling to get a complete view of your IT environment"
         },
         "card-2":{
-          "header": "Attack Impacts",
+          "header": "Attack \nImpacts",
           "subheader":"02",
           "paragraph": "Unable to guide security activities. Can’t carry out demo attacks scenarios and cannot fully determined attack impacts"
         },
         "card-3":{
-          "header": "Audit Requirements",
+          "header": "Audit \nRequirements",
           "subheader":"03",
           "paragraph": "Resource-heavy backup compliance checks that take your focus away from core tasks"
         }

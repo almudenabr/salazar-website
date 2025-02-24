@@ -32,16 +32,16 @@ const cardChallenge =  [
       <h2>{t('section.challenge.header')}</h2>
       <p>{t('section.challenge.paragraph')}</p>
     </div>
-    <div class="card-wrapper">
+    <div class="card card-wrapper">
         {cardChallenge.map((cardItem)=>(
           <Card 
-          isBorder
-          isNumbered 
-          iconAsNumber={t(cardItem.cardIconAsNumber)}
+          class="has-border"
           cardId={cardItem.cardId}
           cardHeader={t(cardItem.cardHeader)}
           cardDescription={t(cardItem.cardDescription)}
-          />
+          >
+            <div slot="card-number" class="card-title-number">{t(cardItem.cardIconAsNumber)}</div>
+          </Card>
         ))}
   
     </div>
@@ -81,6 +81,16 @@ const cardChallenge =  [
     }
   }
 
+  .card .has-border{
+    border:2px solid rgb(var(--highlight))
+  }
+  .card .card-title-number{
+    font-size: 24px;
+    line-height: 26.4px;
+    font-weight: 700;
+    color:white
+  }
+  
   .section-challenge-footer{
     display: flex;
     flex-flow: column;

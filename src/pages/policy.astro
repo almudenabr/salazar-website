@@ -6,13 +6,17 @@ import Layout from '../layouts/default.astro';
 import {t} from 'i18next'
 ---
 <Layout>
-  <Header />
+  <Header>
+    <Fragment slot="button">
+      <a href="/#form-container" id="link-button-demo" class="link-btn">{t('button.demo')}</a>
+    </Fragment>
+  </Header>
   <div class="wrapper-policy-presentation">
     <div class="wrapper">
       <div class="policy-content">
         <div class="policy-content-header">
           <div>
-            <a class="link-btn" href="/">
+            <a class="link-btn" id="link-btn-back" href="/">
               <span><i class='pi pi-arrow-left'></i></span>
             </a><span>{t('policy:policy-back')}</span>
           </div>
@@ -190,8 +194,6 @@ import {t} from 'i18next'
     appearance: none;
     height: 40px;
     display: inline-flex;
-    border: 1px solid rgb(var(--highlight));
-    color:rgb(var(--highlight));
     border-radius: 6px;
     padding-block:10px;
     padding-inline:16px;
@@ -200,13 +202,25 @@ import {t} from 'i18next'
     margin-right: 10px;
     transition: all 0.3s ease-out;  
   }
+  #link-btn-back{
+    border: 1px solid rgb(var(--highlight));
+    color:rgb(var(--highlight));
+  }
+
   .link-btn:hover{
-    color: white;
     cursor: pointer;
     background-color: #75c9ff;
     scale: 1.05;
     box-shadow:0 0 40px 9px #2a4556  /* inner white */
   }
+  #link-btn-back:hover{
+    color: white;
+  }
+  #link-button-demo{
+    background-color: rgb(var(--highlight));
+    color: #1D1E27;
+  }
+
   .policy-content{
     display: flex;
     flex-flow: column;
