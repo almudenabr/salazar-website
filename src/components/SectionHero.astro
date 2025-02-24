@@ -15,7 +15,7 @@ import { t } from 'i18next'
         <img src="/images/img_Hero_MockScreens2x.png">  
       </div> 
       <div class="hero-scroll">
-        <Button title=""/>
+        <Button id="hero-scroll-btn" nameIcon="pi-arrow-down"/>
       </div>
     </div>
   </div>
@@ -34,22 +34,23 @@ import { t } from 'i18next'
   .hero-content{
     display: flex;
     flex-flow: column;
-    gap: 8px;
+    gap: 16px;
   }
   .hero-content, .hero-image-wrapper{
     margin: auto;
-    margin-top: 20px;;
+    margin-top: 40px;
     text-align: center;
   }
   .hero-image-wrapper{
     width:100%;
     height: 325px;
+    margin-top: 80px;
   }
   .hero-image{
     padding-inline:12px;
   }
   .hero-scroll{
-    text-align: right;
+    margin-block: 80px;
   }
   p{
     white-space: break-spaces;

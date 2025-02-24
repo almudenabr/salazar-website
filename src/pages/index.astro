@@ -11,3 +11,28 @@ import Layout from '../layouts/default.astro';
 	<Main />
 	<Footer />
 </Layout>
+
+<script>
+  const buttonHeaderBookDemo = document.getElementById("button-header-book-demo") as HTMLButtonElement
+  const buttonPresentationBookDemo = document.getElementById("button-presentation-book-demo") as HTMLButtonElement
+  const buttonTryBookDemo = document.getElementById("button-try-salazar") as HTMLButtonElement
+	const buttonLearnMore = document.getElementById("button-learn-more") as HTMLButtonElement	
+	const buttonHeroScroll = document.getElementById("hero-scroll-btn") as HTMLButtonElement	
+
+  const formContainer= document.getElementById("form-container") as HTMLElement
+  const presentationContainer= document.getElementById("presentation-container") as HTMLElement
+  const solutionContainer= document.getElementById("solution-container") as HTMLElement
+		
+	buttonHeaderBookDemo.addEventListener("click", ()=>scrollToContainer(formContainer))
+	buttonPresentationBookDemo.addEventListener("click", ()=>scrollToContainer(formContainer))
+	buttonTryBookDemo.addEventListener("click", ()=>scrollToContainer(formContainer))
+
+	buttonLearnMore.addEventListener("click", ()=>scrollToContainer(solutionContainer))
+
+	buttonHeroScroll.addEventListener('click', ()=>scrollToContainer(presentationContainer))
+	
+  
+	function scrollToContainer(containerName: HTMLElement){
+    containerName?.scrollIntoView({behavior: "smooth", block:"center"})
+  }
+</script>
