@@ -1,14 +1,14 @@
 ---
-import Button from './Button.astro'
 import Logo from '../assets/logo_salazar.svg';
-import { t } from 'i18next'
 ---
 
 <header class="header">
   <div class="wrapper">
     <div class="header-top">
       <div class="logo">
-        <Logo height={32} width={130}/>
+        <a href="https://www.getsalazar.io">
+          <Logo height={32} width={130}/>
+        </a>
       </div>
       <slot name="button"/>
     </div>
