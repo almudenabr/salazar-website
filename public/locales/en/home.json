@@ -10,7 +10,7 @@
   "section":{
     "hero":{
       "header":"Governance & Compliance Data Protection Solution",
-      "subheader":"Fulfill backup compliance requirements has never been easier",
+      "subheader":"Fulfilling backup compliance requirements has never been easier",
       "paragraph":"Salazar is the all-in-one tool designed to streamline backup infrastructure management, \n ensuring visibility, security, and compliance on a single platform."
     },
     "presentation":{
@@ -32,19 +32,19 @@
         "card-2":{
           "header": "Attack \nImpacts",
           "subheader":"02",
-          "paragraph": "Unable to guide security activities. Can’t carry out demo attacks scenarios and cannot fully determined attack impacts"
+          "paragraph": "Unable to guide security activities. Can’t carry out demo attacks scenarios and cannot fully determin attack impacts"
         },
         "card-3":{
           "header": "Audit \nRequirements",
           "subheader":"03",
-          "paragraph": "Resource-heavy backup compliance checks that take your focus away from core tasks"
+          "paragraph": "Overcoming heavy backup compliance checks that would take your focus away from core tasks"
         }
       }
     },
     "solution":{
       "subheader":"The solution",
       "header":"<1>Salazar</1> Your complete solution",
-      "paragraph":"Salazar gather information from multiple suppliers in one place, making IT management easier than ever",
+      "paragraph":"Salazar gathers information from multiple suppliers in one place, making IT management easier than ever",
       "paragraph-2":"Ready to bring your IT under control?",
       "card":{
         "card-1":{
@@ -53,7 +53,7 @@
           },
         "card-2":{
             "header": "Optimized Resources",
-            "paragraph": "Unable to guide security activities. Can’t carry out demo attacks scenarios and cannot fully determined attack impacts"
+            "paragraph": "Full visibility into your IT landscape for efficient resource management"
           },
         "card-3":{
             "header": "Cybersecurity",
