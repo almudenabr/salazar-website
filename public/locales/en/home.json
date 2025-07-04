@@ -5,13 +5,16 @@
   "button":{
     "demo":"Book a demo",
     "more": "Learn more about Salazar",
-    "try": "Try Salazar today"
+    "try": "Try Salazar today",
+    "homepage": "Go to Salazar homepage",
+    "next": "Go to next section"
   },
   "section":{
     "hero":{
       "header":"Governance & Compliance Data Protection Solution",
       "subheader":"Fulfilling backup compliance requirements has never been easier",
-      "paragraph":"Salazar is the all-in-one tool designed to streamline backup infrastructure management, \n ensuring visibility, security, and compliance on a single platform."
+      "paragraph":"Salazar is the all-in-one tool designed to streamline backup infrastructure management, \n ensuring visibility, security, and compliance on a single platform.",
+      "alt-text": "Some mocks of the Salazar app"
     },
     "presentation":{
       "header":"Salazar: Your All-in-One IT tool",

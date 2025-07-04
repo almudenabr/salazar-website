@@ -1,8 +1,8 @@
 ---
 
-const { title, id, nameIcon } = Astro.props;
+const { title, id, nameIcon, ariaLabel } = Astro.props;
 ---
-<button id={id}>
+<button id={id} aria-label={ariaLabel}>
   { title && <span>{ title }</span> }
   { nameIcon && <i class={`pi ${nameIcon}`}></i>}
 </button>

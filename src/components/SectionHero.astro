@@ -12,10 +12,10 @@ import { t } from 'i18next'
     </div>
     <div class="hero-image-wrapper">
       <div class="hero-image">
-        <img src="/images/img_Hero_MockScreens2x.png">  
+        <img src="/images/img_Hero_MockScreens2x.png" alt={t('section.hero.alt-text')}/>  
       </div> 
       <div class="hero-scroll">
-        <Button id="hero-scroll-btn" nameIcon="pi-arrow-down"/>
+        <Button id="hero-scroll-btn" nameIcon="pi-arrow-down" ariaLabel={t('button.next')}/>
       </div>
     </div>
   </div>
