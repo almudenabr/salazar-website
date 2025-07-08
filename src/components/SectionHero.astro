@@ -7,7 +7,7 @@ import { t } from 'i18next'
   <div class="wrapper">
     <div class="hero-content">
       <h1>{t('section.hero.header')}</h1>
-      <h3>{t('section.hero.subheader')}</h3>
+      <h2>{t('section.hero.subheader')}</h2>
       <p>{t('section.hero.paragraph')}</p>
     </div>
     <div class="hero-image-wrapper">
@@ -35,6 +35,12 @@ import { t } from 'i18next'
     flex-flow: column;
     gap: 16px;
   }
+  
+  h2{
+    font-size: 28px;
+    line-height: 30.8px;
+  }
+  
   .hero-content, .hero-image-wrapper{
     margin: auto;
     margin-top: 40px;

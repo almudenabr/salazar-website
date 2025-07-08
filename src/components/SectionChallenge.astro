@@ -28,7 +28,7 @@ const cardChallenge =  [
 <div class="wrapper-section-challenge">
   <div class="wrapper">
     <div class="section-challenge-content">
-      <h4>{t('section.challenge.subheader')}</h4>
+      <h2 class="section-challenge-content-subheader">{t('section.challenge.subheader')}</h2>
       <h2>{t('section.challenge.header')}</h2>
       <p>{t('section.challenge.paragraph')}</p>
     </div>
@@ -64,7 +64,10 @@ const cardChallenge =  [
     gap:12px;
     margin-bottom: 24px;
   }
-  h4{
+  .section-challenge-content-subheader{
+    font-size: 24px;
+    line-height: 31.25px;
+    font-weight: 300;
     color: rgb(var(--highlight));
     text-transform: uppercase;
   }

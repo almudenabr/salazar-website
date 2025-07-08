@@ -10,7 +10,7 @@ import { t } from 'i18next'
         <div class="logo">
           <Logo height={32} width={130} aria-label="Salazar Logo"/>
         </div>
-        <h5>{t('footer.payoff')}</h5>
+        <p>{t('footer.payoff')}</p>
       </div>
       <div class="footer-policy">
         <div>
@@ -50,6 +50,11 @@ import { t } from 'i18next'
   }
   .footer-logo{
     max-width:274px;
+  }
+
+  .footer-logo>p{
+    font-size: 14px;
+    line-height: 18.23px;
   }
   .footer-policy{
     display: flex;

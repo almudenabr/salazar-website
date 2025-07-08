@@ -44,7 +44,7 @@ const cardFeatures =  [
 <div class="wrapper-section-features">
   <div class="wrapper">
     <div class="section-features-content">
-      <h4>{t('section.features.header')}</h4>
+      <h2 class="section-features-content-header">{t('section.features.header')}</h2>
       <h2>{t('section.features.subheader')}</h2>
     </div>
     <div class="card-wrapper">
@@ -74,7 +74,10 @@ const cardFeatures =  [
     gap: 8px;
     padding-bottom:40px;
   }
-  h4{
+  .section-features-content-header{
+    font-size: 24px;
+    line-height: 31.25px;
+    font-weight: 300;
     color: rgb(var(--highlight));
     text-transform: uppercase;
   }
