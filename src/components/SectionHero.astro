@@ -1,4 +1,5 @@
 ---
+import { Trans } from 'astro-i18next/components';
 import Button from './Button.astro'
 import { t } from 'i18next'
 
@@ -8,14 +9,15 @@ import { t } from 'i18next'
     <div class="hero-content">
       <h1>{t('section.hero.header')}</h1>
       <h2>{t('section.hero.subheader')}</h2>
-      <p>{t('section.hero.paragraph')}</p>
+      <p>
+        <Trans i18nKey="section.hero.paragraph">
+          <span></span><span></span>
+        </Trans>
+      </p>
     </div>
     <div class="hero-image-wrapper">
       <div class="hero-image">
-        <img src="/images/img_Hero_MockScreens2x.png" alt={t('section.hero.alt-text')}/>  
-      </div> 
-      <div class="hero-scroll">
-        <Button id="hero-scroll-btn" nameIcon="pi-arrow-down" ariaLabel={t('button.next')}/>
+        <img src="/images/img_Hero_MockScreens2x_202509-min.png" alt={t('section.hero.alt-text')}/>  
       </div>
     </div>
   </div>
@@ -27,7 +29,7 @@ import { t } from 'i18next'
     display: flex;
     flex-flow: column;
     gap:40px;
-    padding-top: 40px;
+    margin-block: 40px;
     text-align: center;
   }
   .hero-content{
@@ -38,7 +40,11 @@ import { t } from 'i18next'
   
   h2{
     font-size: 28px;
-    line-height: 30.8px;
+    line-height: 31px;
+  }
+
+  p>span{
+    font-weight: 700;
   }
   
   .hero-content, .hero-image-wrapper{
@@ -49,22 +55,25 @@ import { t } from 'i18next'
   .hero-image-wrapper{
     width:100%;
     height: auto;
-    margin-top: 80px;
+    margin-top: 40px;    
   }
   .hero-image{
     padding-inline:12px;
   }
-  .hero-scroll{
-    display: none;    
-  }
 
+  p{
+    white-space: break-spaces;
+  }
   @media screen and (min-width:768px){
     .hero-scroll{
       display: block;
       margin-block: 80px;
     }
   }
-  p{
-    white-space: break-spaces;
+
+  @media screen and (min-width:1440px){
+    .hero-image-wrapper{
+      padding-inline: 107px;
+    }
   }
 </style>

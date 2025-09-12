@@ -1,0 +1,109 @@
+---
+import 'glider-js/glider.min.css';
+import { t } from 'i18next'
+
+import Button from './Button.astro'
+import Slider from './Slider.astro';
+import SliderCard from './SliderCard.astro';
+
+const cardChallenges =  [
+  {
+    cardId:'card-challenge-1',
+    cardHeader:'section.challenges.card.card-1.header',
+    cardSubheader:'section.challenges.card.card-1.subheader',
+    cardDescription:'section.challenges.card.card-1.paragraph',
+  },
+  {
+    cardId:'card-challenge-2',
+    cardHeader:'section.challenges.card.card-2.header',
+    cardSubheader:'section.challenges.card.card-2.subheader',
+    cardDescription:'section.challenges.card.card-2.paragraph'
+  },
+  {
+    cardId:'card-challenges-3',
+    cardHeader:'section.challenges.card.card-3.header',
+    cardSubheader:'section.challenges.card.card-3.subheader',
+    cardDescription:'section.challenges.card.card-3.paragraph'
+  },
+]
+---
+<div class="wrapper-section-challenges">
+  <div class="wrapper">
+    <div class="section-challenges-content">
+      <h2 class="section-challenges-content-subheader">{t('section.challenges.subheader')}</h2>
+      <h2>{t('section.challenges.header')}</h2>
+      <p>{t('section.challenges.paragraph')}</p>
+    </div>
+
+    <Slider>
+      {cardChallenges.map((card)=>(
+              <SliderCard 
+              class="slide"
+              cardId={card.cardId}
+              cardHeader={t(card.cardHeader)}
+              cardSubheader={t(card.cardSubheader)}
+              cardDescription={t(card.cardDescription)}
+              >
+              </SliderCard>
+      ))}
+    </Slider>
+    
+    <div class="section-challenges-footer">
+      <p>{t('section.challenges.paragraph-2')}</p>
+      <div>
+        <Button title={t('button.more')} nameIcon="pi-arrow-down" id="button-learn-more"/>
+      </div>
+    </div>
+   
+  </div>
+</div>
+
+<style>
+  .wrapper-section-challenges{
+    padding-block: 60px;
+  }
+  .wrapper-section-challenges .section-challenges-content{
+    display: flex;
+    flex-flow: column;
+    gap: 12px;
+    margin-bottom: 40px;
+  }
+  .section-challenges-content-subheader{
+    font-size: 24px;
+    line-height: 31.25px;
+    font-weight: 300;
+    color: rgb(var(--highlight));
+    text-transform: uppercase;
+  }
+  .wrapper-section-challenges .card-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 24px;
+    margin-bottom: 40px;
+  }
+
+  .slide{
+    border: 2px solid #3494CE;
+    background-color: #212124;
+    background: linear-gradient(
+      rgba(33, 33, 36, 0) 0%, 
+      rgba(33, 33, 36, 1) 50%, 
+      rgba(20, 20, 21, 1) 100%);
+    backdrop-filter: blur(20px);
+  }
+  
+  .section-challenges-footer{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    gap: 12px;
+    margin-top: 40px;
+  }
+
+  @media screen and (min-width:1024px){
+    .wrapper-section-challenges{
+      padding-block: 120px;
+    }
+  }  
+</style>

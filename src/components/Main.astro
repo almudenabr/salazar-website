@@ -1,7 +1,6 @@
 ---
 import Presentation from './SectionPresentation.astro';
-import Challenge from './SectionChallenge.astro';
-import Solution from './SectionSolution.astro';
+import Challenges from './SectionChallenges.astro';
 import Features from './SectionFeatures.astro';
 import Form from './SectionForm.astro';
 import Hero from './SectionHero.astro';
@@ -13,15 +12,12 @@ import Hero from './SectionHero.astro';
   <section class="main-section-presentation">
     <Presentation />
   </section>
-  <section class="main-section-challenge">
-    <Challenge />
-  </section>
-  <section class="main-section-solution">
-    <Solution />
-  </section>
   <section class="main-section-features">
     <Features />
-  </section>
+  </section> 
+  <section class="main-section-challenges">
+    <Challenges />
+  </section> 
   <section class="main-section-form">
     <Form />
   </section>
@@ -31,7 +27,7 @@ import Hero from './SectionHero.astro';
   main{
     display: flex;
     flex-flow: column;
-    gap:160px;
+    gap: 80px;
     width: 100%;
   }
   .main-section-hero{
@@ -45,27 +41,60 @@ import Hero from './SectionHero.astro';
     top: 0;
     left: 0;
     width: 100%;
-    height: 451px;
-    background: linear-gradient(to bottom, rgba(255, 0, 0, 0) 0%, rgb(11, 11, 11) 100%), url('/images/bgImg_Hero_DarkDeath2x.png');
+    height: 568px;
+    background: linear-gradient(
+      to bottom,
+    rgba(11, 11, 11, 0) 0%,    
+    rgba(11, 11, 11, 0) 80%,  
+    rgba(11, 11, 11, 0.6) 100%   
+    ), url('/images/bgImg_Hero_DarkDeath2x.png'); 
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center 1%;
     z-index: -1;
   }
-  .main-section-solution{
+
+  .main-section-features{
     position: relative;
-    background-color: #010101;
-    z-index: 0;
   }
-  .main-section-solution::after{
+
+  .main-section-features::after{
     display: block;
     content: "";
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 451px;
-    background: linear-gradient(to bottom, rgba(255, 0, 0, 0) 0%, rgb(1, 1, 1) 100%), url('/images/bgSection_Solutions_2x.png');
+    height: 730px;
+    background: linear-gradient(
+      190deg, 
+      rgba(11, 11, 11, 0.20) 28.3%, 
+      rgba(76, 167, 223, 0.20) 48.66%, 
+      rgba(11, 11, 11, 0.20) 71.03%);
+    backdrop-filter: blur(15px);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center 3%;
+    z-index: -1;
+  }
+ 
+  .main-section-challenges{
+    position: relative;
+  }
+  .main-section-challenges::after{
+    display: block;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 760px;
+    background: linear-gradient(
+      rgba(0, 0, 0, 1) 0%, 
+      rgba(0, 0, 0, 0.5) 25%, 
+      rgba(0, 0, 0, 0.5) 50%, 
+      rgb(0, 0, 0, 1) 100%), 
+      url('/images/bgSection_Challenges.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center 3%;

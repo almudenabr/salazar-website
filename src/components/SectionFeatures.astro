@@ -4,61 +4,85 @@ import { t } from 'i18next'
 
 const cardFeatures =  [
   {
-    cardId:'card-feautures-1',
-    cardIcon:'pi-chart-line',
+    cardId:'card-features-1',
+    cardIcon:'pi-sitemap',
     cardHeader:'section.features.card.card-1.header',
     cardDescription:'section.features.card.card-1.paragraph',
   },
   {
-    cardId:'card-feautures-2',
-    cardIcon:'pi-history',
+    cardId:'card-features-2',
+    cardIcon:'pi-chart-line',
     cardHeader:'section.features.card.card-2.header',
     cardDescription:'section.features.card.card-2.paragraph',
   },
   {
-    cardId:'card-feautures-3',
+    cardId:'card-features-3',
     cardIcon:'pi-check-circle',
     cardHeader:'section.features.card.card-3.header',
     cardDescription:'section.features.card.card-3.paragraph',
   },
   {
-    cardId:'card-feautures-3',
+    cardId:'card-features-4',
     cardIcon:'pi-wrench',
     cardHeader:'section.features.card.card-4.header',
     cardDescription:'section.features.card.card-4.paragraph',
   },
   {
-    cardId:'card-feautures-3',
-    cardIcon:'pi-sitemap',
+    cardId:'card-features-5',
+    cardIcon:'pi-history',
     cardHeader:'section.features.card.card-5.header',
     cardDescription:'section.features.card.card-5.paragraph',
   },
   {
-    cardId:'card-feautures-3',
+    cardId:'card-features-6',
     cardIcon:'pi-users',
     cardHeader:'section.features.card.card-6.header',
     cardDescription:'section.features.card.card-6.paragraph',
   },
 ]
+
+const cardGroupTitles = [
+  'section.features.group.title.group-1',
+  'section.features.group.title.group-2',
+  'section.features.group.title.group-3'
+]
+
+// Group by 2 elements
+function chunkArray<T>(array: T[], size = 2): T[][] {
+  const out: T[][] = [];
+  for (let i = 0; i < array.length; i += size) {
+    out.push(array.slice(i, i + size));
+  }
+  return out;
+}
+
+const groups = chunkArray(cardFeatures, 2);
 ---
-<div class="wrapper-section-features">
+<div class="wrapper-section-features" id="features-container">
   <div class="wrapper">
     <div class="section-features-content">
       <h2 class="section-features-content-header">{t('section.features.header')}</h2>
-      <h2>{t('section.features.subheader')}</h2>
+      <h2 class="section-features-content-subheader">{t('section.features.subheader')}</h2>
+      <p>{t('section.features.paragraph')}</p>
     </div>
     <div class="card-wrapper">
-      {cardFeatures.map((cardItem)=>(
-        <Card
-        class="card has-multicolor"
-        cardId={cardItem.cardId}
-        cardHeader={t(cardItem.cardHeader)}
-        cardDescription={t(cardItem.cardDescription)}
-        >
-          <div slot="card-icon" class="card-icon" >
-            <i class={`pi ${cardItem.cardIcon}`}></i>
-          </div>
-        </Card>
+      {groups.map((groupOfCards, index) => (
+        <div class="panel" >
+          <h3>{t(cardGroupTitles[index])}</h3>
+          {groupOfCards.map((cardItem) => (
+            <Card
+              class="card"
+              cardId={cardItem.cardId}
+              cardHeader={t(cardItem.cardHeader)}
+              cardDescription={t(cardItem.cardDescription)}
+              >
+              <div slot="card-icon" class="card-icon" >
+                <i class={`pi ${cardItem.cardIcon}`}></i>
+              </div>
+            </Card>
+            )
+          )}
+        </div>
       ))}
     </div>
   </div>
@@ -66,7 +90,7 @@ const cardFeatures =  [
 
 <style>
   .wrapper-section-features{
-    padding-block: 40px;
+    margin-block: 40px;
   }
   .section-features-content{
     display: flex;
@@ -81,14 +105,39 @@ const cardFeatures =  [
     color: rgb(var(--highlight));
     text-transform: uppercase;
   }
+
+  .section-features-content-subheader{
+    letter-spacing: 2px;
+  }
+
   .wrapper-section-features .card-wrapper{
-    display: flex;    
-    gap:40px 24px;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 24px;
+    padding: 16px;
+  }
+
+  .panel {
+    border: 3px solid #33617E;
+    backdrop-filter: blur(10px);
+    border-radius: 24px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    
+  }
+
+  .panel:hover {
+    transform: scale(1.05);
+    background-color: #1B303D;
+    transition: all 0.3s ease-out;
+    border-radius: var(--rounded-3xl, 1.5rem);
+    backdrop-filter: blur(10px);
   }
 
   .card{
-    min-height:200px;
+    min-height:169px;
     min-width: 213px;
     width: 100%;
     gap: 16px;
@@ -97,32 +146,11 @@ const cardFeatures =  [
     font-size: 36px;
     color: rgb(var(--highlight));
   }
-  .card.has-multicolor:nth-child(odd){
-    background-color: #33617e;
-  }
-  .card.has-multicolor:nth-child(even){
-    background-color: #234357;
-  }
-  .card.has-multicolor:hover{
-    background-color: rgb(var(--highlight));
-    transition: all 0.3s ease-out;
-  }
-  .card.has-multicolor:hover,
-  .card.has-multicolor:hover .card-icon{
-    color: #234357;
-  }
 
-  @media screen and (min-width:768px){ 
-    .wrapper-section-features .card-wrapper .card{
-      min-width: calc(50% - 12px);
-       flex-basis: calc(50% - 12px);
-     }
-  }
-  @media screen and (min-width:1440px){ 
-    .wrapper-section-features .card-wrapper .card{
-      min-width: initial;
-       flex-basis: calc(33% - 12px);
-     }
+  @media screen and (min-width:1440px){
+    .wrapper-section-features .card-wrapper{
+      grid-template-columns: repeat(3, 1fr);
+    }
   }
 </style>
 

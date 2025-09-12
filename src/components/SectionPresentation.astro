@@ -1,4 +1,5 @@
 ---
+import { Trans } from 'astro-i18next/components';
 import Button from './Button.astro'
 import { t } from 'i18next'
 ---
@@ -7,7 +8,15 @@ import { t } from 'i18next'
     <div class="section-presentation-content">
       <h2>{t('section.presentation.header')}</h2>
       <h3>{t('section.presentation.subheader')}</h3>
-      <p>{t('section.presentation.paragraph')}</p>
+      <div>
+        <p>{t('section.presentation.paragraph1')}</p>
+        <p>{t('section.presentation.paragraph2')}</p>
+      </div>
+      <p>
+        <Trans i18nKey="section.presentation.paragraph3">
+          <span></span><span></span>
+        </Trans>
+      </p>
     </div>
       <Button title={t('button.demo')} id="button-presentation-book-demo"/>
   </div>
@@ -16,18 +25,24 @@ import { t } from 'i18next'
 <style>
   .wrapper-section-presentation{
     margin: auto;
-    text-align:center;
-    padding-block: 40px;
-    margin-top: 0;
-  }
-  .section-presentation-content{
-    max-width: 800px;
     display: flex;
     flex-flow: column;
-    gap: 8px;
-    margin:0 auto 14px;
+    margin-block: 40px;
+    gap:40px;
+    text-align: center;
+  }
+  .section-presentation-content{
+    max-width: 880px;
+    display: flex;
+    flex-flow: column;
+    gap: 16px;
+    margin:0 auto 40px;
   }
   h2{
     color: rgb(var(--highlight))
+  }
+
+  p>span{
+    font-weight: 700;
   }
 </style>

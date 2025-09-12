@@ -1,118 +1,155 @@
 {
-  "salazar":{
-    "title":"Salazar"
+  "salazar": {
+    "title": "Salazar"
   },
-  "button":{
-    "demo":"Book a demo",
+  "button": {
+    "demo": "Book a demo",
     "more": "Learn more about Salazar",
     "try": "Try Salazar today",
     "homepage": "Go to Salazar homepage",
     "next": "Go to next section"
   },
-  "section":{
-    "hero":{
-      "header":"Governance & Compliance Data Protection Solution",
-      "subheader":"Fulfilling backup compliance requirements has never been easier",
-      "paragraph":"Salazar is the all-in-one tool designed to streamline backup infrastructure management, \n ensuring visibility, security, and compliance on a single platform.",
+  "icon": {
+    "previous": "Previous",
+    "next": "Next"
+  },
+  "section": {
+    "hero": {
+      "header": "Everything starts with Salazar",
+      "subheader": "The missing link between backup and business resilience",
+      "paragraph": "Backup compliance and governance platform that gives IT teams insights to better protect and improve your services. \nGain visibility into your RPO/RTO compliance across all backup systems. \nEnhance <1>compliance, security</1> and <1>operational efficiency.</1>",
       "alt-text": "Some mocks of the Salazar app"
     },
-    "presentation":{
-      "header":"Salazar: Your All-in-One IT tool",
-      "subheader":"Discover how Salazar can simplify your IT",
-      "paragraph":"Salazar is your all-in-one tool for simplifying IT backup operations. With strategic insights and seamless infrastructure management, Salazar transforms your data into actionable intelligence that enhances backup compliance, boosts efficiency, and aligns IT with your business goals."
+    "presentation": {
+      "header": "From data to decisions",
+      "subheader": "Governance made visible",
+      "paragraph1": "Salazar organises your backup assets into services, revealing the true resilience of your organisation.",
+      "paragraph2": "From backup operators to service managers and auditors, Salazar empowers every role with the insights needed to govern, improve, and assess the impact on IT operations.",
+      "paragraph3": "It's the smart layer between your backup systems and your business priorities—<1>aligning IT operations with business goals,</1> enabling more efficient, secure decision-making, and supporting enterprise risk management strategies."
     },
-    "challenge":{
-      "header":"Overcoming the challenges of IT management",
-      "subheader":"The challenge",
-      "paragraph":"Business continuity depends on resilience, and protecting data is now more critical than ever. Without an integrated approach, you're likely facing:",
-      "paragraph-2":"Don’t let these challenges slow you down",
-      "card":{
-        "card-1":{
+    "challenge": {
+      "header": "Overcoming the challenges of IT management",
+      "subheader": "The challenge",
+      "paragraph": "Business continuity depends on resilience, and protecting data is now more critical than ever. Without an integrated approach, you're likely facing:",
+      "paragraph-2": "Don't let these challenges slow you down",
+      "card": {
+        "card-1": {
           "header": "Limited \nVisibility",
-          "subheader":"01",
+          "subheader": "01",
           "paragraph": "Struggling to get a complete view of your IT environment"
         },
-        "card-2":{
+        "card-2": {
           "header": "Attack \nImpacts",
-          "subheader":"02",
+          "subheader": "02",
           "paragraph": "Unable to guide security activities. Can’t carry out demo attacks scenarios and cannot fully determin attack impacts"
         },
-        "card-3":{
+        "card-3": {
           "header": "Audit \nRequirements",
-          "subheader":"03",
+          "subheader": "03",
           "paragraph": "Overcoming heavy backup compliance checks that would take your focus away from core tasks"
         }
       }
     },
-    "solution":{
-      "subheader":"The solution",
-      "header":"<1>Salazar</1> Your complete solution",
-      "paragraph":"Salazar gathers information from multiple suppliers in one place, making IT management easier than ever",
-      "paragraph-2":"Ready to bring your IT under control?",
-      "card":{
-        "card-1":{
-            "header": "Modernized Backups",
-            "paragraph": "Reliable RPO (Recovery Point Objective) and RTO (Recovery Time Objective) for seamless data safety"
-          },
-        "card-2":{
-            "header": "Optimized Resources",
-            "paragraph": "Full visibility into your IT landscape for efficient resource management"
-          },
-        "card-3":{
-            "header": "Cybersecurity",
-            "paragraph": "Boost maturity and readiness against threats"
-          },
-        "card-4":{
-            "header": "Business Aligned IT ",
-            "paragraph": "Prioritize IT services based on business impact and improve disaster recovery"
-          },
-        "card-5":{
-            "header": "Empowered Small Teams",
-            "paragraph": "Equip smaller teams with the tools they need to effortlessly manage and control every aspect of IT operations"
-          }
+    "solution": {
+      "subheader": "The solution",
+      "header": "<1>Salazar</1> Your complete solution",
+      "paragraph": "Salazar gathers information from multiple suppliers in one place, making IT management easier than ever",
+      "paragraph-2": "Ready to bring your IT under control?",
+      "card": {
+        "card-1": {
+          "header": "Modernized Backups",
+          "paragraph": "Reliable RPO (Recovery Point Objective) and RTO (Recovery Time Objective) for seamless data safety"
+        },
+        "card-2": {
+          "header": "Optimized Resources",
+          "paragraph": "Full visibility into your IT landscape for efficient resource management"
+        },
+        "card-3": {
+          "header": "Cybersecurity",
+          "paragraph": "Boost maturity and readiness against threats"
+        },
+        "card-4": {
+          "header": "Business Aligned IT ",
+          "paragraph": "Prioritize IT services based on business impact and improve disaster recovery"
+        },
+        "card-5": {
+          "header": "Empowered Small Teams",
+          "paragraph": "Equip smaller teams with the tools they need to effortlessly manage and control every aspect of IT operations"
+        }
       }
     },
-    "features":{
-      "header":"the main features",
-      "subheader":"Salazar core features",
-      "card":{
-        "card-1":{
-            "header": "Critical Services Management",
-            "paragraph": "Analyze, align, and optimize your critical services to enhance decision-making and resource allocation"
-          },
-        "card-2":{
-            "header": "Modernized Backups",
-            "paragraph": "Configure domains, manage assets, and monitor real-time RPO and RTO compliance"
-          },
-        "card-3":{
-            "header": "Backup Compliance",
-            "paragraph": "Generate tailored reports for clear insights into backup compliance and performance"
-          },
-        "card-4":{
-            "header": "Custom Reporting",
-            "paragraph": "Seamlessly connect with tools you already use, like Veritas or Cohesity"
-          },
-        "card-5":{
-            "header": "Centralized & Organized Infrastructure",
-            "paragraph": "Structure and manage your assets from domains to backups, all in one place"
-          },
-        "card-6":{
-            "header": "Role-Based Access",
-            "paragraph": "Assign roles and permissions based on user responsibilities"
-          }
+    "challenges": {
+      "header": "How Salazar solves real-world IT challenges",
+      "subheader": "Real Impact, real scenarios",
+      "paragraph": "Salazar adapts to your environment and priorities—delivering value across teams, systems and enterprise risk management frameworks.",
+      "paragraph-2": "Don't let these challenges slow you down",
+      "card": {
+        "card-1": {
+          "header": "Know your real RPO and RTO risk",
+          "subheader": "When you don't know your RPO and RTO, you don' t know your risk.",
+          "paragraph": "Salazar shows how much data you could lose (RPO) and how long each service would take to recover (RTO). \nWhen you know your RPO and RTO, you can act—improving recovery strategies and strengthening enterprise risk management. \nWhether you're managing a virtual machine, a database, or a file system, you'll always know how protected it is—and where to improve."
+        },
+        "card-2": {
+          "header": "Integrate RPO with CMDB & ITSM",
+          "subheader": "Map technical assets to logical services and enable smarter operations.",
+          "paragraph": "Salazar links RPO metrics to business services, enriching your CMDB and ITSM. \nAlign recovery capabilities with service priorities across IT and business teams. \nEmpower IT Managers, CISOs, and Service Managers to act proactively through system self-remediation."
+        },
+        "card-3": {
+          "header": "Make Decisions Based on Real Exposure",
+          "subheader": "Act before incidents become outages.",
+          "paragraph": "Salazar helps prioritize recovery strategies and infrastructure investments based on real exposure. \nSpot weak points, underprotected assets, or backup misconfigurations—and act before incidents turn into outages. \nThat's daily governance, not reactive firefighting."
+        }
       }
     },
-    "form":{
-      "header":"Ready to transform your IT management?",
-      "subheader":"Book a Demo Today",
-      "paragraph":"Discover how Salazar can enhance security, optimize operations and simplify backup compliance. Request a demo to see Salazar in action and experience the difference it can make for your organization."
+    "features": {
+      "header": "from features to impact",
+      "subheader": "Operational clarity for resilient decisions",
+      "paragraph": "Whether you're a lean IT team managing global infrastructure or a large organization aiming for full compliance, Salazar gives you enterprise-grade visibility without the complexity.",
+      "group": {
+        "title": {
+          "group-1": "Visibility & Control",
+          "group-2": "Compliance & Reporting",
+          "group-3": "Integration & Access"
+        }
+      },
+      "card": {
+        "card-1": {
+          "header": "Central Infrastructure View",
+          "paragraph": "Centralize domains, policies, and assets for full transparency"
+        },
+        "card-2": {
+          "header": "Services Management",
+          "paragraph": "Group and manage assets by business service to align IT with business priorities."
+        },
+        "card-3": {
+          "header": "Backup Compliance",
+          "paragraph": "Track and enforce RPO/RTO targets in real time across environments."
+        },
+        "card-4": {
+          "header": "Custom Reporting",
+          "paragraph": "Generate tailored reports for operations, audit, or business stakeholders."
+        },
+        "card-5": {
+          "header": "Seamless Integration",
+          "paragraph": "Works with NetBackup, Commvault, Cohesity, and other major platforms."
+        },
+        "card-6": {
+          "header": "Role-Based Access Control",
+          "paragraph": "Deliver tailored views for admins, auditors, and business users."
+        }
+      }
+    },
+    "form": {
+      "header": "Ready to Get Started?",
+      "subheader": "Whether you're a lean IT team managing global infrastructure or a large organization aiming for full compliance, Salazar gives you enterprise-grade visibility without the complexity. ",
+      "paragraph": "Don't wait for the next audit—or outage. \nStart governing your backup strategy today."
     }
   },
-  "footer":{
-    "payoff": "Governance & Compliance Data Protection Solution",
-    "cookie":"Cookie Policy",
-    "privacy":"Privacy Policy",
-    "site":"SORINT.lab @ 2025",
+  "footer": {
+    "payoff": "The missing link between backup & business resilience",
+    "cookie": "Cookie Policy",
+    "privacy": "Privacy Policy",
+    "site": "SORINT.lab @ 2025",
     "disclaimer": "All rights reserved."
   }
 }

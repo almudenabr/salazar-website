@@ -5,8 +5,8 @@ import {t} from 'i18next'
 <div class="wrapper-section-form" id="form-container">
   <div class="wrapper">
     <div class="section-form-content">
-      <h2>{t('section.form.subheader')}</h2>
-      <h3>{t('section.form.header')}</h3>
+      <p>{t('section.form.subheader')}</p>
+      <h2>{t('section.form.header')}</h2>
       <p>{t('section.form.paragraph')}</p>
     </div>
     <div class="hubspot-form">
@@ -34,6 +34,10 @@ import {t} from 'i18next'
   }
   .section-form-content{
     margin-bottom: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    white-space: break-spaces;
   }
   .hubspot-form{
     display: flex;
@@ -42,9 +46,6 @@ import {t} from 'i18next'
   h2{
     margin-bottom: 8px;
     color: rgb(var(--highlight))
-  }
-  h3{
-    margin-bottom:32px;
   }
 
   </style>
@@ -130,7 +131,7 @@ import {t} from 'i18next'
       text-decoration: underline;
     }
     #hsForm_9f4b24bf-90d1-49b5-b4e0-df64bde5c314 .hs_submit{
-      text-align: end;
+      text-align: center;
     }
     #hsForm_9f4b24bf-90d1-49b5-b4e0-df64bde5c314 .hs_submit .hs-button{
       appearance: none;
